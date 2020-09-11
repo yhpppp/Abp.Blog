@@ -7,7 +7,7 @@ namespace Abp.Blog.HttpApi.Hosting
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddApplication<BlogWebModule>();
+            services.AddApplication<AbpBlogHttpApiHostingModule>();
         }
 
         public void Configure(IApplicationBuilder app)
