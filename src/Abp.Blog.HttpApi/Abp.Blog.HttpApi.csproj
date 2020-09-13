@@ -6,6 +6,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DocumentationFile>..\Abp.Blog.HttpApi.Hosting\Abp.Blog.HttpApi.xml</DocumentationFile>
+  </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Abp.Blog.Application.Contracts\Abp.Blog.Application.Contracts.csproj" />
     <ProjectReference Include="..\Abp.Blog.Application\Abp.Blog.Application.csproj" />

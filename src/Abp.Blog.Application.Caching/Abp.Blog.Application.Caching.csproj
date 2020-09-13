@@ -1,7 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
+    <Import Project="..\..\common.props" />
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Abp.Blog.ToolKits\Abp.Blog.ToolKits.csproj" />
+    <ProjectReference Include="..\Abp.Blog.Domain.Shared\Abp.Blog.Domain.Shared.csproj" />
+    <ProjectReference Include="..\Abp.Blog.Application.Contracts\Abp.Blog.Application.Contracts.csproj" />
+    <ProjectReference Include="..\Abp.Blog.Domain\Abp.Blog.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Caching" Version="3.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Redis" Version="2.2.0" />
+  </ItemGroup>
 </Project>

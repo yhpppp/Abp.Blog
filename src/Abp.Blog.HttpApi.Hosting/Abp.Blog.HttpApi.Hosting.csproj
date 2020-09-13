@@ -6,11 +6,20 @@
 		<TargetFramework>netcoreapp3.1</TargetFramework>
 	</PropertyGroup>
 
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	  <DocumentationFile></DocumentationFile>
+	</PropertyGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Abp.Blog.HttpApi\Abp.Blog.HttpApi.csproj" />
 
 		<PackageReference Include="Volo.Abp.Autofac" Version="3.1.1" />
 
+		<ProjectReference Include="..\Abp.Blog.EntityFrameworkCore\Abp.Blog.EntityFrameworkCore.csproj">
+		  <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+		</ProjectReference>
+		<ProjectReference Include="..\Abp.Blog.Swagger\Abp.Blog.Swagger.csproj">
+		  <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+		</ProjectReference>
 	</ItemGroup>
 
 </Project>

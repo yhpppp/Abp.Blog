@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Abp.Blog.Swagger;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Hosting;
 using Volo.Abp;
 using Volo.Abp.AspNetCore.Mvc;
@@ -10,7 +11,9 @@ namespace Abp.Blog.HttpApi.Hosting
     [DependsOn(
        typeof(AbpAspNetCoreMvcModule),
        typeof(AbpAutofacModule),
-       typeof(AbpBlogHttpApiModule)
+       typeof(AbpBlogHttpApiModule),
+        typeof(AbpBlogFrameworkCoreModule),
+        typeof(AbpBlogSwaggerModule)
     )]
     public class AbpBlogHttpApiHostingModule : AbpModule
     {

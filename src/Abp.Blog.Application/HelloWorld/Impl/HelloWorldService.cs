@@ -8,7 +8,7 @@ namespace Abp.Blog.Application.HelloWorld.Impl
     {
         public string HelloWorld()
         {
-            return "Hello World";
+            return "Hello World!";
         }
     }
 }
