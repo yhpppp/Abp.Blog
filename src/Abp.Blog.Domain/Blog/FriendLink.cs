@@ -1,10 +1,20 @@
 ﻿using System;
+using Volo.Abp.Domain.Entities;
+
 namespace Abp.Blog.Domain.Blog
 {
-    public class FriendLink
+    /// <summary>
+    /// FriendLink
+    /// </summary>
+    public class FriendLink: Entity<int>
     {
-        public FriendLink()
-        {
-        }
+        /// <summary>
+        /// 标题
+        /// </summary>
+        public string Title { get; set; }
+        /// <summary>
+        /// 链接
+        /// </summary>
+        public string LinkUrl { get; set; }
     }
 }
