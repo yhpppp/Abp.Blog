@@ -16,6 +16,5 @@
 
   <ItemGroup>
     <Folder Include="Configurations\" />
-    <Folder Include="Blog\" />
   </ItemGroup>
 </Project>

@@ -89,6 +89,40 @@
             标签Id
             </summary>
         </member>
+        <member name="T:Abp.Blog.Domain.Blog.Repositories.ICategoryRepository">
+            <summary>
+            ICategoryRepository
+            </summary>
+        </member>
+        <member name="T:Abp.Blog.Domain.Blog.Repositories.IPostRepository">
+            <summary>
+            IPostRepository
+            </summary>
+        </member>
+        <member name="T:Abp.Blog.Domain.Blog.Repositories.IPostTagRepository">
+            <summary>
+            IPostTagRepository
+            </summary>
+        </member>
+        <member name="M:Abp.Blog.Domain.Blog.Repositories.IPostTagRepository.BulkInsertAsync(System.Collections.Generic.IEnumerable{Abp.Blog.Domain.Blog.PostTag})">
+            <summary>
+            批量插入
+            </summary>
+            <param name="postTags"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Abp.Blog.Domain.Blog.Repositories.ITagRepository">
+            <summary>
+            ITagRepository
+            </summary>
+        </member>
+        <member name="M:Abp.Blog.Domain.Blog.Repositories.ITagRepository.BulkInsertAsync(System.Collections.Generic.IEnumerable{Abp.Blog.Domain.Blog.Tag})">
+            <summary>
+            批量插如
+            </summary>
+            <param name="tags"></param>
+            <returns></returns>
+        </member>
         <member name="T:Abp.Blog.Domain.Blog.Tag">
             <summary>
             Tag

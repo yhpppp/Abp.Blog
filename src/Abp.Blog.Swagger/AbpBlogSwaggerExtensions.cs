@@ -29,6 +29,7 @@ namespace Abp.Blog.Swagger
             app.UseSwaggerUI(options =>
             {
                 options.SwaggerEndpoint($"/swagger/v1/swagger.json", "默认接口");
+                options.RoutePrefix = string.Empty;
             });
         }
     }
