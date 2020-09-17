@@ -8,9 +8,11 @@ using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Threading.Tasks;
 using Volo.Abp.AspNetCore.Mvc;
+using static Abp.Blog.Domain.Shared.AbpBlogConsts;
 
 namespace Abp.Blog.HttpApi.Controllers
 {
+    [ApiExplorerSettings(GroupName = Grouping.GroupName_v1)]
     [Route("blog")]
     [ApiController]
     public class BlogController : AbpController

@@ -4,9 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Volo.Abp.AspNetCore.Mvc;
+using static Abp.Blog.Domain.Shared.AbpBlogConsts;
 
 namespace Abp.Blog.HttpApi.Controllers
 {
+    [ApiExplorerSettings(GroupName = Grouping.GroupName_v3)]
     [ApiController]
     [Route("[controller]")]
     public class HelloWorldController:AbpController
