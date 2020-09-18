@@ -40,7 +40,7 @@ namespace Abp.Blog.Swagger
                     options.SwaggerDoc(x.UrlPrefix, x.OpenApiInfo);
                 });
 
-
+                // XML注释
                 options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "Abp.Blog.HttpApi.xml"));
                 options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "Abp.Blog.Domain.xml"));
                 options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "Abp.Blog.Application.Contracts.xml"));

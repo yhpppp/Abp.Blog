@@ -1,6 +1,7 @@
 ﻿using Abp.Blog.Application.Blog;
 using Abp.Blog.Application.Contracts.Blog;
 using Abp.Blog.ToolKits.Base;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,7 @@ namespace Abp.Blog.HttpApi.Controllers
         /// </summary>
         /// <param name="dto"></param>
         /// <returns></returns>
+        [Authorize]
         [HttpPost]
         public async Task<ServiceResult<string>> InsertPostAsync([FromBody] PostDto dto)
         {
@@ -40,6 +42,7 @@ namespace Abp.Blog.HttpApi.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
+        [Authorize]
         [HttpDelete]
         public async Task<ServiceResult> DeletePostAsync([Required] int id)
         {
@@ -63,6 +66,7 @@ namespace Abp.Blog.HttpApi.Controllers
         /// <param name="id"></param>
         /// <param name="dto"></param>
         /// <returns></returns>
+        [Authorize]
         [HttpPut]
         public async Task<ServiceResult<string>> UpdatePostAsync([Required] int id, [FromBody] PostDto dto)
         {

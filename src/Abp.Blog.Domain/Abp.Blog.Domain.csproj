@@ -13,8 +13,4 @@
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Identity.Domain" Version="3.1.1" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Configurations\" />
-  </ItemGroup>
 </Project>
