@@ -11,7 +11,7 @@ namespace Abp.Blog.HttpApi.Controllers
     [ApiExplorerSettings(GroupName = Grouping.GroupName_v3)]
     [ApiController]
     [Route("[controller]")]
-    public class HelloWorldController:AbpController
+    public class HelloWorldController : AbpController
     {
         private readonly IHelloWorldService _helloWorldService;
 
@@ -24,6 +24,13 @@ namespace Abp.Blog.HttpApi.Controllers
         public string HelloWorld()
         {
             return _helloWorldService.HelloWorld();
+        }
+
+        [HttpGet]
+        [Route("Exception")]
+        public string Exception()
+        {
+            throw new NotImplementedException("这是一个未实现的异常接口");
         }
     }
 }
