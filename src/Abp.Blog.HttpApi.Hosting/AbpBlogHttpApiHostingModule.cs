@@ -1,4 +1,6 @@
-﻿using Abp.Blog.Domain.Configurations;
+﻿using Abp.Blog.BackgroundJobs;
+using Abp.Blog.BackgroundJobs.Jobs;
+using Abp.Blog.Domain.Configurations;
 using Abp.Blog.HttpApi.Hosting.Filters;
 using Abp.Blog.HttpApi.Hosting.Middleware;
 using Abp.Blog.Swagger;
@@ -27,6 +29,7 @@ namespace Abp.Blog.HttpApi.Hosting
        typeof(AbpBlogHttpApiModule),
         typeof(AbpBlogFrameworkCoreModule),
         typeof(AbpBlogSwaggerModule)
+        //typeof(AbpBlogBackgroundJobsModule)
     )]
     public class AbpBlogHttpApiHostingModule : AbpModule
     {
@@ -92,6 +95,9 @@ namespace Abp.Blog.HttpApi.Hosting
 
             // Http请求
             context.Services.AddHttpClient();
+
+            // 定时任务
+            //context.Services.AddTransient<IHostedService, HelloWorldJob>();
         }
 
         public override void OnApplicationInitialization(ApplicationInitializationContext context)
