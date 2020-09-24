@@ -30,7 +30,7 @@ namespace Abp.Blog.HttpApi.Controllers
         /// </summary>
         /// <param name="dto"></param>
         /// <returns></returns>
-        [Authorize]
+        //[Authorize]
         [HttpPost]
         public async Task<ServiceResult<string>> InsertPostAsync([FromBody] PostDto dto)
         {

@@ -36,16 +36,18 @@ namespace Abp.Blog.Application.Blog.Impl
                 return result;
             }
 
-            var dto =  new PostDto
-            {
-                Title = post.Title,
-                Author = post.Author,
-                Url = post.Url,
-                Html = post.Html,
-                Markdown = post.Markdown,
-                CategoryId = post.CategoryId,
-                CreationTime = post.CreationTime
-            };
+            //var dto =  new PostDto
+            //{
+            //    Title = post.Title,
+            //    Author = post.Author,
+            //    Url = post.Url,
+            //    Html = post.Html,
+            //    Markdown = post.Markdown,
+            //    CategoryId = post.CategoryId,
+            //    CreationTime = post.CreationTime
+            //};
+
+            var dto = ObjectMapper.Map<Post, PostDto>(post);
 
             result.IsSuccess(dto);
             return result;
@@ -55,16 +57,18 @@ namespace Abp.Blog.Application.Blog.Impl
         {
             var result = new ServiceResult<string>();
 
-            var entity = new Post
-            {
-                Title = dto.Title,
-                Author = dto.Author,
-                Url = dto.Url,
-                Html = dto.Html,
-                Markdown = dto.Markdown,
-                CategoryId = dto.CategoryId,
-                CreationTime = dto.CreationTime
-            };
+            //var entity = new Post
+            //{
+            //    Title = dto.Title,
+            //    Author = dto.Author,
+            //    Url = dto.Url,
+            //    Html = dto.Html,
+            //    Markdown = dto.Markdown,
+            //    CategoryId = dto.CategoryId,
+            //    CreationTime = dto.CreationTime
+            //};
+            var entity = ObjectMapper.Map<PostDto, Post>(dto);
+
             var post = await _postRepository.InsertAsync(entity);
            
             if(post == null)
